@@ -1,0 +1,127 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block title %}Tiempo Real UPS{% endblock %}
+
+{% block content %}
+
+    <div class="container">
+        <div class="row">
+            <div class="col-10 mx-auto mt-5">
+
+                <div class="row row-cols-1 row-cols-md-4 g-4 mt-1">
+                    <div class="col text-center">
+                        <div class="card h-100">
+                          <div class="container">
+                              <canvas id="myChart" width='80' height='50' ></canvas>
+                          </div>
+                          <div class="card-body">
+                            <h5 class="card-title">Voltaje de Salida</h5>
+
+                            <h2 class="card-text text-danger h1" id="v_salida">208 Vac</h2>
+                            <p class="card-text">V Máx: 230 Vac  |  V Min: 205 V</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div class="card h-100 text-center">
+                          <div class="container">
+                              <canvas id="myChart_2" width='80' height='50' ></canvas>
+                          </div>
+                          <div class="card-body">
+                            <h5 class="card-title">Voltaje Continua</h5>
+                            <h2 class="card-text text-danger h1" id="v_cc">208 Vac</h2>
+                            <p class="card-text">V Máx: 550 Vac  |  V Min: 400 V</p>
+
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div class="card h-100">
+                          <div class="container">
+                              <canvas id="myChart" width='80' height='50' ></canvas>
+                          </div>
+                          <div class="card-body">
+                            <h5 class="card-title">Voltaje de Salida</h5>
+                            <p class="card-text">V Máx: 212 Vac  |  V Min: 205 V</p>
+                            <h2 class="card-text" style="color:green;">208 Vac</h2>
+                          </div>
+                        </div>
+                      </div>
+                    <div class="col text-center">
+                      <div class="card h-100">
+                        <div class="container">
+                            <canvas id="myChart" width='80' height='50' ></canvas>
+                        </div>
+                        <div class="card-body">
+                          <h5 class="card-title">Voltaje de Salida</h5>
+                          <p class="card-text">V Máx: 212 Vac  |  V Min: 205 V</p>
+                          <h2 class="card-text" style="color:green;">208 Vac</h2>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                
+                          
+                  <!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop -->
+                  <div class="row mt-3">
+                    <div class="col-12">
+                      <div class="card text-start">
+                        <div class="card-header bg-dark text-white">
+                          Featured
+                        </div>
+                        <div class="card-body text-center">
+                          <h5 class="card-title">Special title treatment</h5>
+                          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                
+                  <!-- Columns are always 50% wide, on mobile and desktop -->
+                  <div class="row mt-3">
+                    <div class="col-12">
+                     
+                        <div class="card-body">
+                          <table class="table table-striped text-center">
+                            <thead class="table-dark"> 
+                              <tr>
+                                <th scope="col">Ultimos Eventos</th>
+                                <th scope="col">First</th>
+                                <th scope="col">Last</th>
+                                <th scope="col">Handle</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <th scope="row">1</th>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">2</th>
+                                <td>Jacob</td>
+                                <td>Thornton</td>
+                                <td>@fat</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">3</th>
+                                <td colspan="2">Larry the Bird</td>
+                                <td>@twitter</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      
+                    </div>
+                  </div>
+
+                <canvas id="myChart"></canvas>
+                    {% comment %} <h2 id="app" >  {{ text }} </h2> {% endcomment %}
+
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+{% endblock %}
